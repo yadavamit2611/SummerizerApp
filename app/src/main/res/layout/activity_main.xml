@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edittextbg1"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/summarize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summarize"
+        app:layout_constraintBottom_toTopOf="@+id/summText"
+        app:layout_constraintEnd_toStartOf="@+id/random"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bigText" />
+
+    <EditText
+        android:id="@+id/bigText"
+        android:layout_width="338dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edittextbg1"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Add the text to summarize"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/summText"
+        android:layout_width="338dp"
+        android:layout_height="188dp"
+        android:layout_marginBottom="168dp"
+        android:background="@drawable/edittextbg2"
+        android:clickable="true"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Summarized text"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/clearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toTopOf="@+id/summText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bigText"
+        app:layout_constraintVertical_bias="0.505" />
+
+    <Button
+        android:id="@+id/random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Text gen"
+        app:layout_constraintBottom_toTopOf="@+id/summText"
+        app:layout_constraintEnd_toStartOf="@+id/clearText"
+        app:layout_constraintStart_toEndOf="@+id/summarize"
+        app:layout_constraintTop_toBottomOf="@+id/bigText"
+        app:layout_constraintVertical_bias="0.505" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
